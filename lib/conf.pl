@@ -6,7 +6,7 @@
 # you can change this to port 8080 or so if you have no root access
 # but for productive use it is recommanded to use port 80 since this is the web
 # standard
-$SERVER_PORT 	  = 8080;
+$SERVER_PORT 	  = 3000;
 
 $CHANGE_USER       = 1;
 $RUNAS_USER  	  = "root";

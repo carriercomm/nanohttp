@@ -11,7 +11,7 @@ configuration data on top
 of the file. The most interesting are surely the 
 $SERVER_PORT and the hash-array 
 %hMimeTypes. The default for the $SERVER_PORT is 
-8080, but remember, you must be
+3000, but remember, you must be
 root to start the server on a port smaller than 1024.
 <li>Now it is time to start the server. Open a console, 
 change to the directory,
@@ -22,7 +22,7 @@ start the server by typing
 "./nanohttp.pl". If all goes well you will see the lines
 <pre>
 Starting http-Server
-Listening for requests on port 8080 
+Listening for requests on port 3000 
 </pre> or the portnumber you changed $SERVER_PORT to.
 May be you see the error message
 <pre>
