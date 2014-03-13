@@ -3,64 +3,50 @@ a {
 	text-decoration: none;
 	font-weight:bold;
 	color : Black;
-	}
+}
 a:hover { 
 	text-decoration: underline; 
-	}
+}
 a:visited { 
 	text-decoration: underline; 
-	}
+}
 body { 
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px; 
-	}
-center {
-	font-family:  Arial, Helvetica, sans-serif; 
+}
+center, td {
 	font-size: 15px; 
-	}
+}
 textarea {
-	font-family:  Arial, Helvetica, sans-serif; font-size: 15px;
 	background-color:#FFCC00;
-	}
-tr {
-	border: 0px none Black; 
-	}
-td {
-	border: 0px none Black; 
-	font-family:  Arial, Helvetica, sans-serif;
-	font-size: 15px
-	}
+}
+tr , td {
+	border: none Black; 
+}
 img {
-	border: 0px none Black;
-	}
-TD {
-	font-size : 15px;
-	}
-H1 {
+	border: none ;
+}
+h1,h2,h3,.nav {
 	font-family: Arial, Helvetica, sans-serif;
+	font-weight : bold;
+}
+h1 {
 	font-size : 20px;
-	font-weight : bold;
-	}
-H2 {
-	font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
 	font-size : 18px;
-	font-weight : bold; 
-	}
-H3 {
-	font-family: Arial, Helvetica, sans-serif;
+}
+h3 {
 	font-size : 16px;
-	font-weight : bold;
-	}
-.navi {
+}
+.nav {
 	font-size :16px;
-	font-weight:bold;
-	}
+    background: #aaa;
+    padding: 4px;
+}
 .std {
-	font-family: Arial, Helvetica, sans-serif;
 	font-size: 15px
-	}
+}
 pre {
-	font-family : Arial, Helvetica, sans-serif; 
 	background-color : #CCCCCC;
 	font-size : 13px;
-	}
+}
