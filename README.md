@@ -1,7 +1,10 @@
-nanohttp
+nanoHttp
 ========
 
-small Webserver written in Perl
+nanoHttp is a small Webserver written in Perl.
+
+Homepage and demo: http://railsbox-30514.euw1.nitrousbox.com
+
 
 ## Features
 
