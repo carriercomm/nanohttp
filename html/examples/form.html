@@ -1,0 +1,48 @@
+<% 
+    do "header.pl";
+%>
+<h1>nanoHttp :: Examples :: Forms</h1>
+This page wants to demonstrate the use of 
+Forms sending data to the server with the
+GET-Method.<br>
+<br>
+Please note: This is only an example. It
+works only if hosted on the <b>nanoHttp</b>,
+for instance on your local installation.
+If the site is hosted on a webserver as static
+pages, you will not see anything.
+<p>
+<form action=form.html method=GET>
+what do you like most?<br>
+
+<select name=food>
+<option>Pizza</option>
+<option>Burger</option>
+<option>Steak</option>
+<option>Salad</option>
+</select><br>
+<br>
+Pepsi or Coke?<br>
+
+<input type=radio name=cola value='Pepsi'>Pepsi<br>
+<input type=radio name=cola value='Coke'>Coke<br>
+<br>
+Any special wishes?<br>
+<input type=text name='special'>
+<input type=hidden name='sent' value=1>
+<hr>
+<input type=submit value=GO>
+</form>
+</p>
+<hr>
+<% 
+if ($ENV{'sent'}) {
+	print "Your choice:<br>
+		$ENV{'food'} with $ENV{'cola'}<br>
+		Extra:<br>
+		$ENV{'special'}";
+}
+%>
+<%
+    do "footer.pl";
+%>

@@ -1,0 +1,22 @@
+<% 
+    do "header.pl";
+%>
+<h1>Internal Server Error</h1>
+The page you requested could not be displayed, 
+because there is a Problem with the website.<p>
+You have the choice to
+<ul>
+<li>go to the <a href="/">homepage</a>
+<li>try it later
+<li>inform the <a href="mailto:oliver@byteworx.de">
+webmaster</a> about the problem
+</ul>
+<p>The error message is:</p>
+<pre>
+<%
+ out $EVAL_ERROR
+%>
+</pre>
+<% 
+    do "footer.pl";
+%>

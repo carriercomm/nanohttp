@@ -1,0 +1,66 @@
+<% 
+    do "header.pl";
+%>
+<h1>nanoHttp :: Examples</h1>
+<%
+sub dumpFile {
+    my $sName = shift;
+    $sName = "html/".$sName;
+    open(FH,$sName);
+    my $line="";
+    print "<pre>";
+    foreach (<FH>) {
+        $line =$_;
+        $line =~ s/</&lt;/g;
+        $line =~ s/>/&gt;/g;
+        print $line;
+    }
+    print "</pre>";
+    close(FH);
+}
+%>
+
+<a href="hello.html">hello.html</a>
+<hr>
+The well known "Hello World" program. Here one can see
+the syntax of a script for <b>nanoHttp</b>.<br>
+You can mix static and dynamic content in one file. A
+dynamic block is opened by &lt;% and closed by %&gt;.
+Betwin these two tokens you can write your perl code.<br>
+With the <b>print</b> command you bring your content to
+the webpage.
+
+<% dumpFile("examples/hello.html")%>
+
+<a href="error/404.html">404.html</a>
+<hr>
+The 404.html file is the page that is displayed, if a file not
+found error occurs. You can edit this page as you like, to
+match your CI.<br>
+I did so by including the standard header and footer of the 
+<b>nanoHttp</b> web site.<br>
+<% dumpFile("error/404.html")%>
+
+header.pl
+<hr>
+Thr files header.pl and footer.pl are included onn every page
+of the <b>nanoHttp</b> web site.<br>
+Here they are not linked, because this would result in a strong
+invalid html page, when they appear alone. Most likely your
+Browser would display only garbage.
+<% dumpFile("lib/header.pl")%>
+
+footer.pl
+<% dumpFile("lib/footer.pl")%>
+
+<a href="info.html">info.html</a>
+<% dumpFile("examples/info.html")%>
+
+<a href="index.html">index.html(this page)</a>
+<% dumpFile("examples/index.html")%>
+
+<a href="form.html">form.html</a>
+<% dumpFile("examples/form.html")%>
+<% 
+    do "footer.pl";
+%>

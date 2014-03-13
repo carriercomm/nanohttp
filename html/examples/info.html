@@ -1,0 +1,57 @@
+<% 
+    do "header.pl";
+%>
+<%
+sub dumpProcFile {
+    my $sName = shift;
+    $sName = "/proc/".$sName;
+    open(FH,$sName);
+    my $line="";
+    print "<pre>";
+    foreach (<FH>) {
+        print $_;
+    }
+    close(FH);
+    print "</pre>";
+}
+%>
+<h1>nanoHttp :: Examples :: Info</h1>
+<dl><h3>Perl variables</h3>
+<dt>program name ($0)
+    <dd><% print $0; %>
+<dt>perl version ($])
+    <dd><% print $]; %>
+<dt>os name ($^O)
+    <dd><% print $^O; %>
+<dt>executable name ($^X)
+    <dd><% print $^X; %>
+<dt>warning ($^W)
+    <dd><% print $^W; %>
+<dt>base time ($^T)
+    <dd><% print $^T; %>
+<dt>include path (@INC)
+    <dd><pre><%
+    foreach (@INC) {
+        print "$_ \n";
+    }%></pre>
+<dt>Environment (@ENV)
+    <dd><pre><%
+    foreach(keys(%ENV)) {
+        print "$_:$ENV{$_}\n";
+    }%></pre>    
+</dl>
+
+<dl><h3>/proc files</h3>
+<dt>cpuinfo
+    <dd><% dumpProcFile("cpuinfo"); %>
+<dt>loadavg
+    <dd><% dumpProcFile("loadavg"); %>
+<dt>uptime
+    <dd><% dumpProcFile("uptime"); %>
+<dt>version
+    <dd><% dumpProcFile("version"); %>
+</dl>
+
+<% 
+    do "footer.pl";
+%>

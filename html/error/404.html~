@@ -1,0 +1,16 @@
+<% 
+    do "header.pl";
+%>
+<h1>Not Found</h1>
+Sorry, the page you requested could not be found on 
+this website.<p>
+You have the choice to
+<ul>
+<li>go to the <a href="/">homepage</a>
+<li>try it later
+<li>inform the <a href="mailto:oliver@byteworx.de">
+webmaster</a> about the problem
+</ul>
+<% 
+    do "footer.pl";
+%>
