@@ -1,7 +1,10 @@
 #!/usr/bin/perl -T
 
 # nanoHttp 0.1
+# a small webserver written in Perl
 # oliver@kurmis.com
+# https://github.com/oliworx/nanohttp
+
 use IO::Socket::INET;
 print "Starting http-Server nanoHttp\n";
 
@@ -67,7 +70,6 @@ if ($RUN_AS_DAEMON) {
 	print $CONSOLE "Running as foreground process\n";
 }
 
-
 # father has nothing to do if chield process is finished
 $SIG{CHLD} = 'IGNORE';
 
@@ -92,7 +94,7 @@ while (1) {
 	        # get the server answer from the function that handles the protokoll
 	        # and print it to the client connection
 		    print $client http($client);
-		    # no close the chield process
+		    # close the chield process
 	        exit;
 	    }
 	} else {
