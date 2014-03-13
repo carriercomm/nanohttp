@@ -9,7 +9,7 @@
 $SERVER_PORT 	  = 3000;
 
 $CHANGE_USER       = 1;
-$RUNAS_USER  	  = "root";
+$RUNAS_USER  	  = "nobody";
 $RUNAS_GROUP 	  = "nobody";
 
 # directory that holds the webfiles
