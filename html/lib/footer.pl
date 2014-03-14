@@ -32,7 +32,7 @@ print '
 		HSPACE=0 VSPACE=0></TD>
 	</TR>
 </TABLE>
-<div class="foot">created with nanoHttp</div>
+<div class="foot">served by <a href="https://github.com/oliworx/nanohttp">nanoHttp</a></div>
 </CENTER>
 </BODY>
 </HTML>
