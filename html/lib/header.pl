@@ -9,8 +9,7 @@ LEFTMARGIN=2 MARGINWIDTH=5 MARGINHEIGHT=5>
 <CENTER>
 <TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
 	<TR>
-		<TD colspan="3"><IMG SRC="/images/logo.gif" 
-		WIDTH=88 HEIGHT=31 BORDER=0 HSPACE=0 VSPACE=5></TD>
+		<TD colspan="3"><h1>nanoHttp</h1></TD>
 		<TD colspan="4"></TD>
 	</TR>
 	<TR VALIGN="BOTTOM">
@@ -41,9 +40,9 @@ LEFTMARGIN=2 MARGINWIDTH=5 MARGINHEIGHT=5>
 				<TR VALIGN="TOP">
 					<TD CLASS="nav" >
 
-                        <a href="/index.html">nanoHttp</a> | 
-                        <a href="/examples/">Examples</a> | 
+                        <a href="/index.html">Home</a> | 
                         <a href="/doc/">Docu</a> |
+                        <a href="/examples/">Examples</a> | 
                         <a href="/download/">Download</a>
                     </TD>
                 </TR>

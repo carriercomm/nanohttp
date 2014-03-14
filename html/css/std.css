@@ -1,20 +1,16 @@
-a {
-	font-family:  Arial, Helvetica, sans-serif;
-	text-decoration: none;
-	font-weight:bold;
-	color : Black;
-}
-a:hover { 
-	text-decoration: underline; 
-}
-a:visited { 
-	text-decoration: underline; 
-}
 body { 
 	font-family: Arial, Helvetica, sans-serif;
 }
 center, td {
 	font-size: 15px; 
+}
+a {
+	text-decoration: none;
+	font-weight:bold;
+	color : #00006B;
+}
+a:hover, a:visited { 
+	text-decoration: underline; 
 }
 textarea {
 	background-color:#FFCC00;
