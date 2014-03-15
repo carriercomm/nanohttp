@@ -3,7 +3,7 @@ nanoHttp
 
 nanoHttp is a small Webserver written in Perl.
 
-Homepage and demo: http://oliworx.kd.io
+Homepage and demo: http://nano.kurmis.com
 
 
 ## Features
