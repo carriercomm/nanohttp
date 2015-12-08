@@ -32,17 +32,17 @@ sub parseFile {
     # if an error occurs an ISE 500 is thrown
     my $pERR = shift;
 
-	$saveFH=select; 					  	   # save the current filehandel for output 
+	$saveFH=select; 					  	    # save the current filehandel for output 
     ${$pRet} =~ s|<%(.*?)%>| 					# get the code from inside the tokens
     		local $::OUT_BUFFER = "";			#reset the output buffer fo this snippet
-    		open(BUFFER,'>', \$::OUT_BUFFER)     # BUFFER is a in memory files 
+    		open(BUFFER,'>', \$::OUT_BUFFER)    # BUFFER is a in memory files 
     			or die "Can't open BUFFER: $!";
-    		select BUFFER; 					  # all print commands shell write to BUFFER 
-    		eval $1;							 # execute the code snippet
+    		select BUFFER; 					    # all print commands shell write to BUFFER 
+    		eval $1;							# execute the code snippet
     		${$pERR}.=$@;						# append error messages  
     		close BUFFER;						# close the in memory file
     		$::OUT_BUFFER						# $::OUT_BUFFER now contains the results from the code
-    											 # snippet ans this replaces the tocens an the code betwin
+    											# snippet and this replaces the tokens and the code betwin
     	|xseg;  ## options for the regexpr substitution: 
     			## extended, single line, eval, global:
     select $saveFH;
