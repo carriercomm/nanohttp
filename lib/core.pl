@@ -121,7 +121,7 @@ sub http {
     	## the error page for the 404 error could not be found too
     	$iStatusCode      = 400;
     	$sStatus = "$iStatusCode Not Found";
-    	$sReturn = "Fehler: Datei nicht gefunden ($HTML_DIR$sFileName)";
+    	$sReturn = "Error: file not found ($HTML_DIR$sFileName)";
 	} else {
 		$sContentType = sGetContentType($sFileName);
 		## read the file line by line 
